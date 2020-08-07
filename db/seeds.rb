@@ -10,13 +10,15 @@ ingredients_array = results.map do |result|
   result["strIngredient1"]
 end
 
+puts "Destroying ingredients"
+Ingredient.destroy_all
+
 puts "Creating ingredients...."
 ingredients_array.each do |ingredient|
   Ingredient.create!(name: ingredient)
 end
 
 puts "Created #{Ingredient.count} ingredients!"
-
 
 #Cocktails
 
@@ -25,6 +27,9 @@ cocktails_array = ["Ancient Mariner", "Bacardi", "Blow my Skull Off", "Blue Hawa
 "Cobra's Fang", "Cojito",
 "Cremat", "Ancient Mariner", "Bacardi", "Blue Hawaii", "Brass Monkey", "Bumbo",
 "Bushwacker","Caribou Lou","Cobra's Fang", "Cojito", "Cremat"]
+
+puts "Destroying Cocktails"
+Cocktail.destroy_all
 
 puts "Creating cocktails...."
 cocktails_array.each do |cocktail|
