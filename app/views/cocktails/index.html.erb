@@ -4,7 +4,10 @@
       <h1>Find your favorite cocktail</h1>
         <div class="cards">
           <% @cocktails.each do |cocktail| %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?cocktail)">
+            <div class="card-category"
+              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url( <%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) :
+               "https://source.unsplash.com/featured/?cocktail)" %>">
               <p><%= link_to cocktail.name, cocktail_path(cocktail)%></p>
             </div>
           <% end %>
@@ -13,4 +16,5 @@
     </div>
   </div>
 </div>
+
 

@@ -24,9 +24,7 @@ puts "Created #{Ingredient.count} ingredients!"
 
 cocktails_array = ["Ancient Mariner", "Bacardi", "Blow my Skull Off", "Blue Hawaii",
 "Brass Monkey", "Bumbo", "Bushwacker", "Caribou Lou",
-"Cobra's Fang", "Cojito",
-"Cremat", "Ancient Mariner", "Bacardi", "Blue Hawaii", "Brass Monkey", "Bumbo",
-"Bushwacker","Caribou Lou","Cobra's Fang", "Cojito", "Cremat"]
+"Cobra's Fang", "Cojito","Cremat"]
 
 puts "Destroying Cocktails"
 Cocktail.destroy_all
