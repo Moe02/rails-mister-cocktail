@@ -4,7 +4,7 @@
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,6 @@
   </head>
 
   <body>
-    <%#= render 'banner'%>
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), src=">
-      <div class="container">
-        <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-        <p>Change your life and learn to code at one of our campuses around the world.</p>
-        <a class="btn btn-flat" href="#">Apply now</a>
-      </div>
-    </div>
 
     <%= yield %>
   </body>

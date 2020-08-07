@@ -1,3 +1,4 @@
+<%= render 'banner' %>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -5,8 +6,8 @@
         <div class="cards">
           <% @cocktails.each do |cocktail| %>
             <div class="card-category"
-              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url( <%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) :
+              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
+              url( <%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key, crop: :thumb, gravity: :face) :
                "https://source.unsplash.com/featured/?cocktail)" %>">
               <p><%= link_to cocktail.name, cocktail_path(cocktail)%></p>
             </div>

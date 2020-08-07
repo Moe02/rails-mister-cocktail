@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Cocktail!</h1>
-        <p><%= @cocktail.name %></p>
+      <h1><%= @cocktail.name %></h1>
+      <%= cl_image_tag( @cocktail.photo.attached? ? @cocktail.photo.key : "https://source.unsplash.com/featured/?cocktail)", crop: :thumb, gravity: :face, width: 300) %>
         <h3>Dose</h3>
         <% @cocktail.doses.each do |dose| %>
         <p><%= dose.description %> of <%= dose.ingredient.name %>
